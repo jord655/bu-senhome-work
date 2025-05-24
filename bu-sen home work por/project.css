@@ -1,0 +1,103 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* wrap menu items if needed */
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.2rem; /* responsive font size */
+}
+
+.sbtn {
+    border: none;
+    width: 100px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    color: blue;
+    border: solid gray 1px;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap; /* wrap projects on smaller screens */
+}
+
+img {
+    width: 100%; /* responsive image */
+    max-width: 400px;
+    height: auto;
+}
+
+.project1,
+.project2 {
+    box-shadow: 0px 5px 10px gray;
+    padding: 20px;
+    border-radius: 40px;
+    flex: 1 1 300px; /* allows flexible sizing */
+    max-width: 400px;
+    margin: 10px;
+}
+
+.li {
+    color: white;
+}
+.footer{
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    .sbtn {
+        font-size: 1.2rem;
+        width: 80px;
+    }
+
+    .parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project1,
+    .project2 {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 0.9rem;
+    }
+
+    .sbtn {
+        width: 70px;
+        font-size: 1rem;
+    }
+}
